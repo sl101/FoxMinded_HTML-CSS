@@ -81,3 +81,14 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+a:active,
+button:active {
+	-webkit-tap-highlight-color: transparent;
+	background-color: transparent;
+}
