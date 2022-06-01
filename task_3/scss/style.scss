@@ -7,21 +7,43 @@ body {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 1.1;
-	background-color: $body;
 	color: $text;
 }
 
 .wrapper {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	background: linear-gradient(
+		to right,
+		rgba(87, 128, 145, 1) 0%,
+		rgba(57, 94, 109, 1) 50%,
+		rgba(87, 128, 145, 1) 100%
+	);
 }
 
 .content {
+	max-width: 1300px;
+	width: 100%;
+	padding: 50px 0 20px;
+	border-radius: 10px;
+	background: linear-gradient(
+		to right,
+		rgba(239, 240, 241, 1) 0%,
+		rgba(250, 250, 250, 1) 50%,
+		rgba(239, 240, 241, 1) 100%
+	);
 	// .content__title
 
 	&__title {
-	}
-
-	// .content__form
-
-	&__form {
+		display: block;
+		text-align: center;
+		margin: 0 0 50px 0;
+		font-weight: 600;
+		font-size: 42px;
+		// font-stretch: condensed;
 	}
 }

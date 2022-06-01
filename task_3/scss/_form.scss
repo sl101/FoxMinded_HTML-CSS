@@ -1,4 +1,14 @@
 .form {
+	// .form__wrapper
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		padding: 70px 80px;
+		margin: 0 0 20px 0;
+		background-color: $light-100;
+		border-top: 2px solid $border-dark;
+		border-bottom: 2px solid $border-dark;
+	}
 	// .form__content
 
 	&__content {
@@ -7,5 +17,27 @@
 	// .form__button
 
 	&__button {
+		position: relative;
+		top: 0;
+		display: block;
+		padding: 25px 40px;
+		margin: 0 70px 0 auto;
+		border-radius: 10px;
+		font-size: 28px;
+		background-color: $brand-dark;
+		color: $brand-light;
+		outline: none;
+		border: 2px solid transparent;
+		transition: background-color $hoverTime ease, border-color $hoverTime ease;
+
+		&:focus {
+			border-color: $text-dark;
+		}
+		&:hover {
+			background-color: $body;
+		}
+		&:active {
+			top: 2px;
+		}
 	}
 }
