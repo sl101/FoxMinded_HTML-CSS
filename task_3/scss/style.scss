@@ -1,0 +1,27 @@
+@import "_reset";
+@import "_var";
+@import "_form";
+
+body {
+	font-family: "Montserrat", serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.1;
+	background-color: $body;
+	color: $text;
+}
+
+.wrapper {
+}
+
+.content {
+	// .content__title
+
+	&__title {
+	}
+
+	// .content__form
+
+	&__form {
+	}
+}
