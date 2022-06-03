@@ -6,7 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Create Account</title>
 </head>
@@ -19,150 +18,178 @@
 				Create Account
 			</span>
 			<form class="content__form form" action="#" method="post" enctype="multipart/form-data">
-				<!-- <div class="form__wrapper"> -->
 				<ul class="form__list">
 					<li class="form__item">
-						<label class="form__label label">
+						<label class="form__label">
 							First name*
-							<input class="form__input input" type="text" name="first-name" value=""
-								placeholder="enter your first name" required>
+							<input class="form__input" type="text" name="first-name" value=""
+								placeholder="enter your first name" required tabindex="1">
 						</label>
 					</li>
 
 					<li class="form__item">
-						<label class="form__label label">
+						<label class="form__label">
 							Last name
-							<input class="form__input input" type="text" name="last-name" value=""
-								placeholder="enter your last name">
+							<input class="form__input" type="text" name="last-name" value=""
+								placeholder="enter your last name" tabindex="2">
 						</label>
 					</li>
 
-					<li class="form__item">
-						<label class="form__label label">
+					<li class="form__item email-item">
+						<label class="form__label">
 							Email*
-							<input class="form__input input" type="email" name="email" placeholder="enter your email"
-								required>
+							<input class="form__input" type="email" name="email" placeholder="enter your email" required
+								tabindex="3">
 						</label>
 					</li>
 
 					<li class="form__item">
-						<label class="form__label label">
+						<label class="form__label">
 							Password*
-							<input class="form__input input" type="password" name="userpass"
-								placeholder="enter your password" required>
+							<input class="form__input" type="password" name="userpass" placeholder="enter your password"
+								required tabindex="4">
 						</label>
 					</li>
 
 					<li class="form__item">
-						<label class="form__label label">
+						<label class="form__label">
 							Confirm Password*
-							<input class="form__input input" type="password" name="userpass"
-								placeholder="enter your password again" required>
+							<input class="form__input" type="password" name="userpass"
+								placeholder="enter your password again" required tabindex="5">
 						</label>
 					</li>
 
-					<li class="form__item radio-form">
-						<ul class="radio-form__list">
-							Gender:
-							<li class="radio-form__item">
-								<label class="form__label label">
-									<input class="form__input input" type="radio" name="gender" value="male" checked>
+					<li class="form__item radiochek">
+						Gender:
+						<ul class="radiochek__list radiochek__list--radio">
+							<li class="radiochek__item">
+								<input class="form__input radiochek__input" id="male" type="radio" name="gender"
+									value="male" checked>
+								<label class="form__label radiochek__label" for="male" tabindex="6">
 									Male
 								</label>
 							</li>
 
-							<li class="radio-form__item">
-								<label class="form__label label">
-									<input class="form__input input" type="radio" name="gender" value="female">
+							<li class="radiochek__item">
+								<input class="form__input radiochek__input" id="female" type="radio" name="gender"
+									value="female">
+								<label class="form__label radiochek__label" for="female" tabindex="6">
 									Female
 								</label>
 							</li>
 						</ul>
 					</li>
 
-					<li class="form__item chekbox-form">
-						<ul class="chekbox-form__list">
-							Hobbies
-							<li class="chekbox-form__item">
-								<label class="form__label label">
-									<input class="form__input input" type="checkbox" name="music" value="yes">
+					<li class="form__item radiochek">
+						Hobbies
+						<ul class="radiochek__list">
+							<li class="radiochek__item">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
+									id="music" name="music" value="yes" checked>
+								<label class="form__label radiochek__label radiochek__label--box" for="music"
+									tabindex="7">
 									Music
 								</label>
 							</li>
 
-							<li class="chekbox-form__item">
-								<label class="form__label label">
-									<input class="form__input input" type="checkbox" name="sports" value="yes">
+							<li class="radiochek__item">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
+									id="sports" name="sports" value="yes">
+								<label class="form__label radiochek__label radiochek__label--box" for="sports"
+									tabindex="8">
 									Sports
 								</label>
 							</li>
 
-							<li class="chekbox-form__item">
-								<label class="form__label label">
-									<input class="form__input input" type="checkbox" name="travel" value="yes">
+							<li class="radiochek__item">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
+									id="travel" name="travel" value="yes">
+								<label class="form__label radiochek__label radiochek__label--box" for="travel"
+									tabindex="9">
 									Travel
 								</label>
 							</li>
 
-							<li class="chekbox-form__item">
-								<label class="form__label label">
-									<input class="form__input input" type="checkbox" name="movies" value="yes">
+							<li class="radiochek__item">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
+									id="movies" name="movies" value="yes">
+								<label class="form__label radiochek__label radiochek__label--box" for="movies"
+									tabindex="10">
 									Movies
 								</label>
 							</li>
 						</ul>
 					</li>
 
-					<li class="form__item">
-						<label class="form__label label">
-							Source of Income
-							<input class="form__input input" type="number" placeholder="Employed">
-						</label>
+					<li class="form__item income-item">
+						Source of Income
+						<ul class="income-item__wrapper">
+							<input class="income-item__input" id="employed" type="radio" value="employed" name="income"
+								checked>
+							<label class="income-item__label" for="employed">Employed</label>
+							<input class="income-item__input" id="freelance" type="radio" value="freelance"
+								name="income">
+							<label class="income-item__label" for="freelance">Freelance</label>
+							<input class="income-item__input" id="landlord" type="radio" value="landlord" name="income">
+							<label class="income-item__label" for="landlord">Landlord</label>
+
+							<button class="income-item__arrow income-item__arrow--up" type="button"
+								tabindex="11"></button>
+							<button class="income-item__arrow income-item__arrow--down" type="button"
+								tabindex="12"></button>
+						</ul>
 					</li>
 
-
-					<li class="form__item">
-						<label class="form__label label">
-							Income
-						</label>
-						<input class="form__input input" type="range" name="income" id="incomeInputId" value="24"
-							min="1" max="100" oninput="incomeOutputId.value = incomeInputId.value">
-						<div class="form__output output">
-							<output class="output__value" name="income" id="incomeOutputId">
-								26
-							</output>
-							<span class="output__box">K</span>
+					<li class="form__item range-item">
+						Income
+						<div class="form__output range-item__range">
+							<input class="form__input range-item__slider" type="range" name="income" id="incomeInputId"
+								value="24" min="0" max="100" oninput="incomeOutputId.value = incomeInputId.value"
+								tabindex="13">
+							<div class="range-item__box">
+								<output class="range-item__amount" name="income" id="incomeOutputId">
+									26
+								</output>
+								<span class="range-item__value">K</span>
+							</div>
 						</div>
 					</li>
 
-					<li class="form__item">
-						<label class="form__label label">
+					<li class="form__item file-item">
+						<label class="form__label file-item__label">
 							Upload Profile Picture
-							<input class="form__input input" type="file">
+							<input class="form__input file-item__input" type="file">
 						</label>
+						<div class="file-item__box">
+							<button class="file-item__button" type="button" tabindex="14">Choose File</button>
+							<span class="file-item__message">No file chosen</span>
+						</div>
 					</li>
 
-					<li class="form__item">
-						<label class="form__label label">
+					<li class="form__item number-item">
+						<label class="form__label">
 							Age
-							<input class="form__input input" type="number" name="age" placeholder="18">
+							<input class="form__input number-item__input" type="number" name="age" placeholder="18"
+								tabindex="15">
 						</label>
 					</li>
 
-					<li class="form__item">
-						<label class="form__label label">
+					<li class="form__item textarea-item">
+						<label class="form__label">
 							Bio
-							<textarea class="form__input input"></textarea>
+							<textarea class="form__input textarea-item__input" tabindex="16"></textarea>
 						</label>
 					</li>
 				</ul>
-				<!-- </div> -->
-				<button class="form__button" type="submit">
+
+				<button class="form__button" type="submit" tabindex="17">
 					Create
 				</button>
 			</form>
 		</div>
 	</div>
+
+	<script src="js/script.js"></script>
 </body>
 
 </html>
