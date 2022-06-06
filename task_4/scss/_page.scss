@@ -2,23 +2,72 @@
 	position: relative;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .pacman {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	border-radius: 100%;
-	background-color: $pacman;
+	position: relative;
+	width: 160px;
+	height: 160px;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border: 80px solid $pacman;
+		border-radius: 50%;
+		border-right: 80px solid transparent;
+		animation: pacman_1 linear $pacmanTime infinite;
+	}
+
+	&::after {
+		animation: pacman_2 linear $pacmanTime infinite;
+	}
 }
 
-.ball {
-	display: inline-block;
+.ball__item {
+	position: absolute;
 	width: 30px;
 	height: 30px;
-	border-radius: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
 	background-color: $ball;
+	animation: moove linear $mooveTime infinite;
+}
+
+.ball__item:nth-child(2) {
+	animation-delay: $ballNext;
+}
+
+.ball__item:nth-child(3) {
+	animation-delay: $ballNext * 2;
+}
+
+.ball__item:nth-child(4) {
+	animation-delay: $ballNext * 3;
+}
+
+.ball__item:nth-child(5) {
+	animation-delay: $ballNext * 4;
+}
+
+.ball__item:nth-child(6) {
+	animation-delay: $ballNext * 5;
+}
+
+.ball__item:nth-child(7) {
+	animation-delay: $ballNext * 6;
+}
+
+.ball__item:nth-child(8) {
+	animation-delay: $ballNext * 7;
 }

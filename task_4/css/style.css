@@ -81,10 +81,103 @@ button:active {
   background-color: transparent;
 }
 
+@-webkit-keyframes pacman_1 {
+  0% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes pacman_1 {
+  0% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@-webkit-keyframes pacman_2 {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes pacman_2 {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes moove {
+  0% {
+    right: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  83% {
+    opacity: 0;
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moove {
+  0% {
+    right: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  83% {
+    opacity: 0;
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
 .content {
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,19 +190,77 @@ button:active {
 }
 
 .pacman {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background-color: yellow;
+  position: relative;
+  width: 160px;
+  height: 160px;
 }
 
-.ball {
-  display: inline-block;
+.pacman::before, .pacman::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 80px solid yellow;
+  border-radius: 50%;
+  border-right: 80px solid transparent;
+  -webkit-animation: pacman_1 linear 0.6s infinite;
+          animation: pacman_1 linear 0.6s infinite;
+}
+
+.pacman::after {
+  -webkit-animation: pacman_2 linear 0.6s infinite;
+          animation: pacman_2 linear 0.6s infinite;
+}
+
+.ball__item {
+  position: absolute;
   width: 30px;
   height: 30px;
-  border-radius: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
   background-color: #fff;
+  -webkit-animation: moove linear 3s infinite;
+          animation: moove linear 3s infinite;
+}
+
+.ball__item:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.ball__item:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.ball__item:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.ball__item:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.ball__item:nth-child(6) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.ball__item:nth-child(7) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.ball__item:nth-child(8) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 html,

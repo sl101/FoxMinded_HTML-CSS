@@ -1,0 +1,40 @@
+@keyframes pacman_1 {
+	0% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(270deg);
+	}
+}
+
+@keyframes pacman_2 {
+	0% {
+		transform: rotate(90deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(90deg);
+	}
+}
+
+@keyframes moove {
+	0% {
+		right: 0;
+	}
+
+	80% {
+		opacity: 1;
+	}
+	83% {
+		opacity: 0;
+	}
+	100% {
+		right: 100%;
+		opacity: 0;
+	}
+}
