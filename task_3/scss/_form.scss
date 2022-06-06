@@ -20,6 +20,7 @@
 	// .form__item
 	&__item {
 		background-color: transparent;
+		cursor: default;
 	}
 
 	// .form__label
@@ -47,6 +48,10 @@
 		&:focus {
 			border-color: $brand-dark;
 		}
+	}
+
+	.input {
+		cursor: text;
 	}
 
 	// .form__button
@@ -387,13 +392,36 @@
 
 	// .file-item__input
 	&__input {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 1px;
-		min-height: 1px;
-		opacity: 0;
-		visibility: hidden;
+		border: none;
+		color: $text;
+
+		&:focus::-webkit-file-upload-button {
+			border-color: $brand-dark;
+		}
+
+		&::-webkit-file-upload-button {
+			position: relative;
+			top: 0;
+			color: $text-dark;
+			font-weight: 600;
+			font-size: 26px;
+			padding: 4px 10px;
+			background-color: $light-0;
+			border: 1px solid $text-light;
+			border-radius: 10px;
+			outline: none;
+			cursor: pointer;
+			box-shadow: 0 0 1px 1px $text-light;
+			transition: background-color $hoverTime ease;
+
+			&:hover {
+				background-color: $text-light;
+			}
+
+			&:active {
+				top: 1px;
+			}
+		}
 	}
 
 	// .file-item__button

@@ -98,6 +98,7 @@ button:active {
 
 .form__item {
   background-color: transparent;
+  cursor: default;
 }
 
 .form__label {
@@ -135,6 +136,10 @@ button:active {
 
 .form__input:focus {
   border-color: #14bb94;
+}
+
+.form .input {
+  cursor: text;
 }
 
 .form__button {
@@ -491,13 +496,38 @@ button:active {
 }
 
 .file-item__input {
-  position: absolute;
+  border: none;
+  color: #666;
+}
+
+.file-item__input:focus::-webkit-file-upload-button {
+  border-color: #14bb94;
+}
+
+.file-item__input::-webkit-file-upload-button {
+  position: relative;
   top: 0;
-  left: 0;
-  width: 1px;
-  min-height: 1px;
-  opacity: 0;
-  visibility: hidden;
+  color: #3f3f3f;
+  font-weight: 600;
+  font-size: 26px;
+  padding: 4px 10px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 1px 1px #dadada;
+          box-shadow: 0 0 1px 1px #dadada;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.file-item__input::-webkit-file-upload-button:hover {
+  background-color: #dadada;
+}
+
+.file-item__input::-webkit-file-upload-button:active {
+  top: 1px;
 }
 
 .file-item__button {
