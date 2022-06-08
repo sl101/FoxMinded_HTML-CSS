@@ -25,11 +25,18 @@
 		border: 80px solid $pacman;
 		border-radius: 50%;
 		border-right: 80px solid transparent;
+	}
+
+	&::before {
+		transform: rotate(43deg);
 		animation: pacman_1 linear $pacmanTime infinite;
+		animation-delay: $waitingTime;
 	}
 
 	&::after {
+		transform: rotate(-43deg);
 		animation: pacman_2 linear $pacmanTime infinite;
+		animation-delay: $waitingTime;
 	}
 }
 
