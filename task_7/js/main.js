@@ -1,23 +1,5 @@
 "use strict";
 
-// const swiperEx = new Swiper('.swiper',{
-
-// wrapperClass: 'swiper__wrapper',
-// slideClass: 'swiper__slide',
-
-// navigation: {
-// 	nextEl: '.hero__arrow--next',
-// 	prevEl: '.hero__arrow--prev',
-// },
-
-// 	spaceBetween: 20,
-// 	centeredSlides: true,
-// 	slidesPerView: 4,
-// 	slidesPerGroup: 1,
-	
-// });
-
-
 const carousel = new Swiper('.carousel',{
 
 	wrapperClass: 'carousel__wrapper',
@@ -34,14 +16,12 @@ const carousel = new Swiper('.carousel',{
 		type: 'bullets',
 	},
 
-	// spaceBetween: 70,
-	speed: 1200,
-	// loop: true,
+	speed: 1600,
 
-	// effect: "fade",
-	// fadeEffect: {
-	// 	crossFade: true
-	// }
+	effect: "fade",
+	fadeEffect: {
+		crossFade: true
+	}
 	});
 
 
