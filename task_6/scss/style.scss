@@ -1,0 +1,12 @@
+@import "_reset";
+@import "_var";
+@import "_mixin";
+@import "_page";
+
+body {
+	font-family: "OpenSans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	background-color: $bodyLight;
+	color: $bodyText;
+}
