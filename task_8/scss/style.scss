@@ -2,30 +2,12 @@
 @import "_var";
 @import "_fonts";
 @import "_mixin";
-@import "_page";
 
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
-}
-
-body {
-	font-family: "Objective", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	background-color: $color-fff;
-	color: $color-0f0;
-}
-
-.container {
-	max-width: 980px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
+@import "_global";
+@import "_header";
+@import "_head";
+@import "_about";
+@import "_description";
+@import "_reviews";
+@import "_proposition";
+@import "_footer";

@@ -6,15 +6,428 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Carousel</title>
+	<title>E-commerce App</title>
 </head>
 
 <body>
-	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, dolor recusandae quisquam nostrum adipisci facilis
-	excepturi dicta corporis eligendi saepe.
-</body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
 
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+					<a class="header__logo goto hover" data-goto=".hero" href="#" tabindex="1">
+						Logo
+					</a>
+
+					<div class="header__menu menu">
+						<button class="menu__burger burger" type="button" tabindex="2">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+
+						<nav class="menu__body fixed">
+							<span class="sr-only">Navigation</span>
+
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link hover goto" data-goto=".home" href="#" tabindex="3">Home</a>
+								</li>
+
+								<li class="menu__item">
+									<a class="menu__link hover goto" data-goto=".about" href="#" tabindex="4">About</a>
+								</li>
+
+								<li class="menu__item">
+									<a class="menu__link hover goto" data-goto=".contact" href="#" tabindex="7">Contact
+										us</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main-page">
+			<section class="head">
+				<div class="container">
+					<div class="head__wrapper">
+						<div class="head__content">
+							<h1 class="head__title">
+								New E-commerce App best for You
+							</h1>
+							<span class="head__description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet sed vulputate vitae velit
+								dictum cursus amet. Turpis donec ut velit quis. Cursus commodo, eget urna, sapien amet.
+							</span>
+							<div class="head__appbox app">
+								<ul class="app__list">
+									<li class="app__item">
+										<a href="#" class="app__link">
+											<img class="app__img" src="img/icons/google-play.png"
+												alt=" Button on Google-play link">
+										</a>
+									</li>
+
+									<li class="app__item">
+										<a href="#" class="app__link">
+											<img class="app__img" src="img/icons/app-store.png"
+												alt=" Button on Google-play link">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="head__picture">
+							<img class="head__img" src="img/bg/mockup.png" alt="Mobile device examlpe image">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about">
+				<div class="container">
+					<div class="about__content">
+						<h2 class="about__title">
+							What we do to help
+							our customers in
+							digital era.
+						</h2>
+						<div class="about__cart cart-about">
+							<ul class="cart-about__list">
+								<li class="cart-about__item cart">
+									<div class="cart__picture">
+										<img class="cart__img" src="img/icons/receive.png" alt="Graphics man with box">
+									</div>
+									<h3 class="cart__title">
+										Receive
+									</h3>
+									<div class="cart__description">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.
+									</div>
+									<a class="cart__link" href="#">
+										Learn more
+									</a>
+								</li>
+
+								<li class="cart-about__item cart">
+									<div class="cart__picture">
+										<img class="cart__img" src="img/icons/send.png" alt="Graphics man with box">
+									</div>
+									<h3 class="cart__title">
+										Send
+									</h3>
+									<div class="cart__description">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.
+									</div>
+									<a class="cart__link" href="#">
+										Learn more
+									</a>
+								</li>
+
+								<li class="cart-about__item cart">
+									<div class="cart__picture">
+										<img class="cart__img" src="img/icons/buy.png" alt="Graphics man with box">
+									</div>
+									<h3 class="cart__title">
+										Buy
+									</h3>
+									<div class="cart__description">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua.
+									</div>
+									<a class="cart__link" href="#">
+										Learn more
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="description">
+				<div class="container">
+					<div class="description__content">
+						<h2 class="description__title title">
+							How it works
+						</h2>
+						<ul class="description__list">
+							<li class="description__item stage">
+								<div class="stage__icon">
+									<img class="stage__img" src="img/svg-icons/create.svg" alt="Icon create an account">
+								</div>
+								<h4 class="stage__title">
+									Create an account
+								</h4>
+								<span class="stage__text">
+									Lorem ipsum dolor sit amet,
+									consecteteu.
+								</span>
+							</li>
+
+							<li class="description__item stage">
+								<div class="stage__icon">
+									<img class="stage__img" src="img/svg-icons/security.svg"
+										alt="Icon shield with check mark">
+								</div>
+								<h4 class="stage__title">
+									Get authorization
+								</h4>
+								<span class="stage__text">
+									Lorem ipsum dolor sit amet,
+									consecteteu.
+								</span>
+							</li>
+
+							<li class="description__item stage">
+								<div class="stage__icon">
+									<img class="stage__img" src="img/svg-icons/emoji-happy.svg" alt="Icon emoji happy">
+								</div>
+								<h4 class="stage__title">
+									Enjoy the app
+								</h4>
+								<span class="stage__text">
+									Lorem ipsum dolor sit amet,
+									consecteteu.
+								</span>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="reviews">
+				<div class="container">
+					<h2 class="reviews__title title">
+						What our client say
+					</h2>
+					<div class="reviews__slider slider-reviews">
+						<ul class="slider-reviews">
+							<li class="slider-reviews__slide slide-review">
+								<div class="slide-review__picture">
+									<img class="slide-review__img" src="img/bg/customer.png"
+										alt="Woman looking at smartphone">
+								</div>
+								<div class="slide-review__description">
+									<p class="slide-review__text">
+										Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis
+										elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt
+										pretium.
+									</p>
+									<span class="slide-review__signature">
+										Angel Paulina
+									</span>
+								</div>
+							</li>
+
+							<li class="slider-reviews__slide slide-review">
+								<div class="slide-review__picture">
+									<img class="slide-review__img" src="img/bg/customer.png"
+										alt="Woman looking at smartphone">
+								</div>
+								<div class="slide-review__description">
+									<p class="slide-review__text">
+										Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis
+										elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt
+										pretium.
+									</p>
+									<span class="slide-review__signature">
+										Angel Paulina
+									</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="proposition">
+				<div class="container">
+					<div class="proposition__picture">
+						<img class="proposition__img" src="img/bg/mockup_2.png" alt="Mobile devices examlpe image">
+					</div>
+					<div class="proposition__content">
+						<h2 class="proposition__title title">
+							Download app to enjoy more!
+						</h2>
+						<div class="proposition__description">
+							<p>
+								Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum
+								amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.
+							</p>
+						</div>
+						<div class="proposition__appbox app">
+							<ul class="app__list">
+								<li class="app__item">
+									<a href="#" class="app__link">
+										<img class="app__img" src="img/icons/google-play-black.png"
+											alt=" Button on Google-play link">
+									</a>
+								</li>
+
+								<li class="app__item">
+									<a href="#" class="app__link">
+										<img class="app__img" src="img/icons/app-store-black.png"
+											alt=" Button on Google-play link">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<nav class="footer__top menu-footer">
+					<ul class="menu-footer__list">
+						<li class="menu-footer__item">
+							<a class="menu-footer__logo goto hover" data-goto=".hero" href="#">
+								Logo
+							</a>
+						</li>
+
+						<li class="menu-footer__item footer-nav">
+							<h5 class="footer-nav__title">
+								Quick Links
+							</h5>
+							<ul class="footer-nav__list">
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Sign Up
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										About Us
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-footer__item footer-nav">
+							<h5 class="footer-nav__title">
+								Others
+							</h5>
+							<ul class="footer-nav__list">
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										User FAQs
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Contact Us
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Legal
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Privacy Policy
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Terms and Conditions
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-footer__item footer-nav">
+							<h5 class="footer-nav__title">
+								Products
+							</h5>
+							<ul class="footer-nav__list">
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Send
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Receive
+									</a>
+								</li>
+
+								<li class="footer-nav__item">
+									<a class="footer-nav__link" href="#">
+										Buy
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-footer__item footer-nav">
+							<form class="footer-nav__form footer-form" action="#">
+								<span class="footer-form__description">
+									Subscribe to our newsletter and be the first to know about our updates
+								</span>
+								<div class="footer-form__connect">
+									<input class="footer-form__input" type="email" placeholder="Email Address">
+									<button class="footer-form__button" type="button">
+										Subscribe
+									</button>
+								</div>
+							</form>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer__button">
+					<span class="footer__copy">
+						Copyright © 2020. All rights reserved.
+					</span>
+					<div class="footer__social social">
+						<ul class="social__list">
+							<li class="social__item social-media">
+								<a class="social-media__link" href="#">
+									<img src="img/svg-icons/youtube.svg" alt="Icon youtube" class="social-media__img">
+								</a>
+							</li>
+
+							<li class="social__item social-media">
+								<a class="social-media__link" href="#">
+									<img src="img/svg-icons/Instagram.svg" alt="Icon instagram"
+										class="social-media__img">
+								</a>
+							</li>
+
+							<li class="social__item social-media">
+								<a class="social-media__link" href="#">
+									<img src="img/svg-icons/Facebook.svg" alt="Icon facebook" class="social-media__img">
+								</a>
+							</li>
+
+							<li class="social__item social-media">
+								<a class="social-media__link" href="#">
+									<img src="img/svg-icons/Twitter.svg" alt="Icon twitter" class="social-media__img">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
 
 </html>
