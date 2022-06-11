@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Carousel</title>
+</head>
+
+<body>
+	<section class="page">
+		<h1 class="page__title sr-only">
+			Carousel Page
+		</h1>
+		<div class="page__carousel carousel">
+			<div class="carousel__arrow carousel__arrow--prev"></div>
+			<div class="carousel__arrow carousel__arrow--next"></div>
+
+			<ul class="carousel__wrapper">
+				<li class="carousel__slide slide" style="background-image: url(img/carousel_1.jpg);">
+					<div class="slide__content">
+						<h2 class="slide__title">
+							The forest
+						</h2>
+						<span class="slide__subtitle">
+							Open world survival horror
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic tempore ut, fuga
+							aspernatur
+							delectus error veritatis. Corporis, mollitia reiciendis.
+						</span>
+					</div>
+				</li>
+
+				<li class="carousel__slide slide" style="background-image: url(img/carousel_2.jpg);">
+					<div class="slide__content">
+						<h2 class="slide__title">
+							Ocean
+						</h2>
+						<span class="slide__subtitle">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate id quae nam officiis.
+						</span>
+					</div>
+				</li>
+
+				<li class="carousel__slide slide" style="background-image: url(img/carousel_3.jpg);">
+					<div class="slide__content">
+						<h2 class="slide__title">
+							The mountains
+						</h2>
+						<span class="slide__subtitle">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+						</span>
+					</div>
+				</li>
+			</ul>
+
+			<div class="carousel__pagination"></div>
+		</div>
+	</section>
+</body>
+
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

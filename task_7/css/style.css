@@ -1,0 +1,263 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a:active,
+button:active {
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel__arrow::before, .carousel__arrow::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 51px;
+  height: 12px;
+  background-color: #fff;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.carousel__arrow--prev {
+  left: 70px;
+}
+
+.carousel__arrow--prev::before {
+  top: 20px;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.carousel__arrow--prev::after {
+  bottom: 20px;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.carousel__arrow--next {
+  right: 70px;
+}
+
+.carousel__arrow--next::before {
+  top: 20px;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.carousel__arrow--next::after {
+  bottom: 20px;
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.carousel .swiper-button-disabled::before, .carousel .swiper-button-disabled::after {
+  background-color: #888;
+}
+
+.carousel__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel__pagination {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 120px;
+  width: 100%;
+  min-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+}
+
+.carousel .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.carousel .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.slide {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 0 120px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fff;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide__title {
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+.slide__subtitle {
+  font-size: 28px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
