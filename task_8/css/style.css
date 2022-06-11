@@ -81,6 +81,30 @@ button:active {
   background-color: transparent;
 }
 
+@font-face {
+  font-family: Objective;
+  font-display: swap;
+  src: url("../fonts/Objective-Bold.woff2") format("woff2"), url("../fonts/Objective-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: Objective;
+  font-display: swap;
+  src: url("../fonts/Objective-Medium.woff2") format("woff2"), url("../fonts/Objective-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: Objective;
+  font-display: swap;
+  src: url("../fonts/Objective-Regular.woff2") format("woff2"), url("../fonts/Objective-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -94,7 +118,7 @@ button:active {
 }
 
 body {
-  font-family: "OpenSans", sans-serif;
+  font-family: "Objective", sans-serif;
   font-weight: 400;
   font-size: 16px;
   background-color: #fff;
