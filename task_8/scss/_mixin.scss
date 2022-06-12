@@ -32,6 +32,11 @@
 		@content;
 	}
 }
+@mixin sm-min {
+	@media only screen and (min-width: #{$screen-sm + px}) {
+		@content;
+	}
+}
 
 @mixin md {
 	@media only screen and (max-width: #{$screen-md + px}) {
@@ -39,8 +44,8 @@
 	}
 }
 
-@mixin lg-min {
-	@media only screen and (min-width: #{$screen-lg + px}) {
+@mixin md-min {
+	@media only screen and (min-width: #{$screen-md + px}) {
 		@content;
 	}
 }
@@ -51,8 +56,20 @@
 	}
 }
 
+@mixin lg-min {
+	@media only screen and (min-width: #{$screen-lg + px}) {
+		@content;
+	}
+}
+
 @mixin xl {
 	@media only screen and (max-width: #{$screen-xl + px}) {
+		@content;
+	}
+}
+
+@mixin xl-min {
+	@media only screen and (min-width: #{$screen-xl + px}) {
 		@content;
 	}
 }
