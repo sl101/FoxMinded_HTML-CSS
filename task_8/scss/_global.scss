@@ -29,8 +29,11 @@ body {
 }
 .maxcontainer {
 	max-width: $maxcontainer;
-	margin: 0 auto;
-	padding: 0 130px;
+	padding: 0 15px;
+	@include xl-min {
+		padding: 0 130px;
+		margin: 0 auto;
+	}
 }
 
 .wrapper {

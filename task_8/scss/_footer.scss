@@ -6,6 +6,10 @@
 	&__top {
 		padding: 55px 0 35px;
 		border-bottom: 1px solid $color-fff;
+
+		@include sm {
+			padding: 40px 0 25px;
+		}
 	}
 
 	// .footer__buttom
@@ -14,6 +18,10 @@
 		justify-content: space-between;
 		padding: 20px 0;
 		align-items: center;
+
+		@include md {
+			flex-direction: column-reverse;
+		}
 	}
 
 	// .footer__copy
@@ -21,12 +29,86 @@
 		display: block;
 		font-weight: 700;
 		line-height: 16px;
+
+		@include md {
+			text-align: center;
+			font-weight: 400;
+			font-size: 14px;
+		}
 	}
 }
 
 .footer-nav {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-areas:
+		"logo quicklinks"
+		"logo others"
+		"logo products"
+		"form form";
+
+	@include sm-min {
+		grid-template-areas:
+			"logo logo logo"
+			"others quicklinks products"
+			"form form form";
+		grid-row-gap: 30px;
+	}
+
+	@include md-min {
+		grid-template-areas:
+			"logo quicklinks others products"
+			"form form form form";
+	}
+
+	@include xl-min {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		@include sm-min {
+			justify-self: flex-start;
+			min-width: 125px;
+			padding-right: 15px;
+		}
+
+		@include md-min {
+			padding: 0;
+		}
+
+		&--logo {
+			grid-area: logo;
+		}
+
+		&--quicklinks,
+		&--others,
+		&--products {
+			justify-self: flex-end;
+			@include sm-min {
+				justify-self: flex-start;
+			}
+		}
+
+		&--quicklinks {
+			grid-area: quicklinks;
+		}
+
+		&--others {
+			grid-area: others;
+		}
+
+		&--products {
+			grid-area: products;
+			padding: 0;
+		}
+
+		&--form {
+			grid-area: form;
+			@include sm-min {
+				padding: 0;
+			}
+		}
+	}
 
 	// .footer-nav__logo
 	&__logo {
@@ -46,6 +128,15 @@
 		border-bottom: 2px solid $color-fff;
 	}
 
+	&__list {
+		@include sm {
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			visibility: hidden;
+		}
+	}
+
 	// .footer-nav__unit
 	&__unit {
 		&:not(:last-child) {
@@ -61,15 +152,23 @@
 }
 
 .footer-form {
-	max-width: 394px;
+	@include sm-min {
+		max-width: 394px;
+	}
 
 	// .footer-form__description
 	&__description {
 		display: block;
-		max-width: 364px;
-		font-size: 18px;
-		line-height: 26px;
-		margin: 0 0 20px 0;
+		font-size: 14px;
+		line-height: 22px;
+		margin: 0 0 10px 0;
+
+		@include sm-min {
+			margin: 0 0 20px 0;
+			font-size: 18px;
+			line-height: 26px;
+			max-width: 364px;
+		}
 	}
 
 	// .footer-form__connect
@@ -77,28 +176,39 @@
 		min-height: 50px;
 		display: flex;
 		justify-content: space-between;
+
+		@include sm {
+			flex-direction: column;
+		}
 	}
 
 	&__input,
 	&__button {
+		display: block;
 		background-color: $color-fff;
 		border-radius: 3px;
 		outline: none;
 		border: 1px solid transparent;
+		min-height: 50px;
 	}
 
 	// .footer-form__input
 	&__input {
-		flex: 0 0 268px;
-		max-width: 268px;
+		max-width: 100%;
 		padding: 0 7px;
-		margin: 0 10px 0 0;
+		margin: 0 0 10px 0;
 		transition: box-shadow $hoverTime linear, border-color $hoverTime linear;
 
 		&::placeholder {
 			font-size: 14px;
 			color: $color-bg25;
 			transition: color $hoverTime linear;
+		}
+
+		@include sm-min {
+			flex: 0 0 268px;
+			max-width: 268px;
+			margin: 0 10px 0 0;
 		}
 
 		@include md-min {
@@ -121,12 +231,15 @@
 	&__button {
 		position: relative;
 		top: 0;
-		flex: 0 0 116px;
-		max-width: 116px;
 		font-weight: 700;
 		color: $color-4a9;
 		transition: box-shadow $hoverTime linear, border-color $hoverTime linear, background-color $hoverTime linear,
 			color $hoverTime linear;
+
+		@include sm-min {
+			flex: 0 0 116px;
+			max-width: 116px;
+		}
 
 		@include md-min {
 			&:focus {
@@ -143,6 +256,10 @@
 
 		&:active {
 			top: 1px;
+			@include md {
+				border-color: transparent;
+				background-color: $color-fff;
+			}
 		}
 	}
 }
@@ -153,6 +270,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include md {
+			margin: 0 0 20px 0;
+		}
 	}
 
 	// .social__item
@@ -177,7 +298,7 @@
 			}
 
 			&:hover path {
-				fill: #000;
+				fill: $color-000;
 			}
 		}
 
