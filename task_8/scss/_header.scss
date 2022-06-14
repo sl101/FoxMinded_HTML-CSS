@@ -26,11 +26,12 @@
 
 		@include md-min {
 			&:focus {
-				color: $color-0f0;
+				border-bottom-color: $color-4a9;
 			}
 
 			&:hover {
-				border-bottom-color: $color-4a9;
+				color: $color-0f0;
+				border-bottom-color: transparent;
 			}
 		}
 	}

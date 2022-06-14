@@ -243,21 +243,32 @@ body {
   top: 0;
   outline: none;
   border: 1px solid transparent;
-  -webkit-transition: color 0.2s linear, border-color 0.2s linear;
-  transition: color 0.2s linear, border-color 0.2s linear;
+  -webkit-transition: border-color 0.3s linear, color 0.3s linear;
+  transition: border-color 0.3s linear, color 0.3s linear;
 }
 
 @media only screen and (min-width: 767.98px) {
   .hover:focus {
-    color: #4a99d3;
+    border-bottom-color: #4a99d3;
   }
   .hover:hover {
-    border-bottom-color: #4a99d3;
+    color: #4a99d3;
+    border-bottom-color: transparent;
   }
 }
 
 .hover:active {
   top: 1px;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .hover--footer:focus {
+    border-bottom-color: #fff;
+  }
+  .hover--footer:hover {
+    color: #0f001a;
+    border-bottom-color: transparent;
+  }
 }
 
 .menu__body {
@@ -332,10 +343,11 @@ body {
 
 @media only screen and (min-width: 767.98px) {
   .header__logo:focus {
-    color: #0f001a;
+    border-bottom-color: #4a99d3;
   }
   .header__logo:hover {
-    border-bottom-color: #4a99d3;
+    color: #0f001a;
+    border-bottom-color: transparent;
   }
 }
 
@@ -587,10 +599,10 @@ body {
   position: relative;
   top: 0;
   outline: none;
-  -webkit-transition: top 0.2s linear, -webkit-box-shadow 0.2s linear;
-  transition: top 0.2s linear, -webkit-box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear, top 0.2s linear;
-  transition: box-shadow 0.2s linear, top 0.2s linear, -webkit-box-shadow 0.2s linear;
+  -webkit-transition: top 0.3s linear, -webkit-box-shadow 0.3s linear;
+  transition: top 0.3s linear, -webkit-box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, top 0.3s linear;
+  transition: box-shadow 0.3s linear, top 0.3s linear, -webkit-box-shadow 0.3s linear;
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -605,4 +617,253 @@ body {
 
 .app__link:active {
   top: 0px;
+}
+
+.about {
+  position: relative;
+}
+
+.footer {
+  color: #fff;
+  background-color: #4a99d3;
+}
+
+.footer__top {
+  padding: 55px 0 35px;
+  border-bottom: 1px solid #fff;
+}
+
+.footer__buttom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__copy {
+  display: block;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-nav__logo {
+  max-width: 110px;
+  font-weight: 700;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.footer-nav__title {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 0 34px 0;
+  line-height: 28px;
+  border-bottom: 2px solid #fff;
+}
+
+.footer-nav__unit:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+
+.footer-nav__link {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+
+.footer-form {
+  max-width: 394px;
+}
+
+.footer-form__description {
+  display: block;
+  max-width: 364px;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 0 20px 0;
+}
+
+.footer-form__connect {
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-form__input, .footer-form__button {
+  background-color: #fff;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.footer-form__input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 268px;
+          flex: 0 0 268px;
+  max-width: 268px;
+  padding: 0 7px;
+  margin: 0 10px 0 0;
+  -webkit-transition: border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
+  transition: border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, border-color 0.3s linear;
+  transition: box-shadow 0.3s linear, border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
+}
+
+.footer-form__input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.footer-form__input:-ms-input-placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.footer-form__input::-ms-input-placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.footer-form__input::placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .footer-form__input:focus {
+    -webkit-box-shadow: inset 0 0 10px 0 #4a99d3;
+            box-shadow: inset 0 0 10px 0 #4a99d3;
+  }
+  .footer-form__input:focus::-webkit-input-placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:focus:-ms-input-placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:focus::-ms-input-placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:focus::placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:hover::-webkit-input-placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:hover:-ms-input-placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:hover::-ms-input-placeholder {
+    color: #4a99d3;
+  }
+  .footer-form__input:hover::placeholder {
+    color: #4a99d3;
+  }
+}
+
+.footer-form__button {
+  position: relative;
+  top: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 116px;
+          flex: 0 0 116px;
+  max-width: 116px;
+  font-weight: 700;
+  color: #4a99d3;
+  -webkit-transition: border-color 0.3s linear, background-color 0.3s linear, color 0.3s linear, -webkit-box-shadow 0.3s linear;
+  transition: border-color 0.3s linear, background-color 0.3s linear, color 0.3s linear, -webkit-box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, border-color 0.3s linear, background-color 0.3s linear, color 0.3s linear;
+  transition: box-shadow 0.3s linear, border-color 0.3s linear, background-color 0.3s linear, color 0.3s linear, -webkit-box-shadow 0.3s linear;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .footer-form__button:focus {
+    -webkit-box-shadow: inset 0 0 10px 0 #4a99d3;
+            box-shadow: inset 0 0 10px 0 #4a99d3;
+  }
+  .footer-form__button:hover {
+    -webkit-box-shadow: inset 0 0 10px 0 transparent;
+            box-shadow: inset 0 0 10px 0 transparent;
+    background-color: #4a99d3;
+    border-color: #fff;
+    color: #fff;
+  }
+}
+
+.footer-form__button:active {
+  top: 1px;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__item {
+  display: block;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: block;
+  position: relative;
+  top: 0;
+  outline: none;
+  -webkit-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .social__link:focus path {
+    fill: rgba(14, 29, 40, 0.8);
+  }
+  .social__link:hover path {
+    fill: #000;
+  }
+}
+
+.social__link:active {
+  top: 1px;
+}
+
+.social__link path {
+  fill: #fff;
+  -webkit-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
 }

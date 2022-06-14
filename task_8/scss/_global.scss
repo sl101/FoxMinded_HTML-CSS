@@ -69,20 +69,34 @@ body {
 	top: 0;
 	outline: none;
 	border: 1px solid transparent;
-	transition: color $hoverTime linear, border-color $hoverTime linear;
+	transition: border-color $hoverTime linear, color $hoverTime linear;
 
 	@include md-min {
 		&:focus {
-			color: $color-4a9;
+			border-bottom-color: $color-4a9;
 		}
 
 		&:hover {
-			border-bottom-color: $color-4a9;
+			color: $color-4a9;
+			border-bottom-color: transparent;
 		}
 	}
 
 	&:active {
 		top: 1px;
+	}
+
+	&--footer {
+		@include md-min {
+			&:focus {
+				border-bottom-color: $color-fff;
+			}
+
+			&:hover {
+				color: $color-0f0;
+				border-bottom-color: transparent;
+			}
+		}
 	}
 }
 
