@@ -1,0 +1,41 @@
+.description {
+	padding: 95px 0 100px;
+	background-color: $color-bc10;
+
+	// .description__title
+	&__title {
+		color: $color-4a9;
+		margin: 0 0 100px 0;
+	}
+
+	// .description__list
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.stage {
+	text-align: center;
+	padding: 0 10px;
+
+	// .stage__icon
+	&__icon {
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	// .stage__title
+	&__title {
+		font-weight: 500;
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+
+	// .stage__text
+	&__text {
+		line-height: 26px;
+	}
+}
