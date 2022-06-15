@@ -1,55 +1,277 @@
 .about {
-	position: relative;
+	overflow: hidden;
+
+	&__container {
+		position: relative;
+		padding: 50px 0;
+
+		@include sm-min {
+			padding: 80px 0;
+		}
+
+		@include md-min {
+			padding: 100px 0;
+		}
+
+		@include lg-min {
+			padding: 150px 0;
+		}
+	}
 
 	// .about__content
-
 	&__content {
+		position: relative;
+		z-index: 3;
+		min-height: 1175px;
 	}
 
 	// .about__title
-
 	&__title {
+		text-align: center;
+		font-weight: 500;
+		font-size: calc(20px + (16 + 16 * 0.7) * ((100vw - 320px) / 1440));
+		line-height: 30px;
+		color: $color-260;
+		margin: 0 0 30px 0;
+
+		@include sm-min {
+			max-width: 395px;
+			text-align: left;
+		}
+
+		@include lg-min {
+			margin: 0;
+		}
+
+		@include xl-min {
+			font-size: 36px;
+			line-height: 46px;
+		}
 	}
 
-	// .about__cart
+	.decor__bottom,
+	.decor {
+		position: absolute;
+		top: 0;
+		right: 16px;
+		width: 141px;
+		height: 119px;
+		border: 8px solid $color-4a9;
+		border-radius: 4px;
+		background-color: transparent;
+		opacity: 0.7;
+		box-shadow: 0 0 4px 0 $color-bg25;
 
-	&__cart {
+		@include sm {
+			display: none;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 141px;
+			height: 119px;
+			border: 6px solid transparent;
+			border-radius: 4px;
+			background-color: transparent;
+			opacity: 0.9;
+			box-shadow: 0 0 4px 0 $color-bg25;
+		}
 	}
 
-	// .about__list
+	.decor {
+		&::before,
+		&::after {
+			border-color: $color-4a9;
+		}
 
-	&__list {
+		&::before {
+			top: 24px;
+			left: -40px;
+		}
+
+		&::after {
+			top: 72px;
+			right: -74px;
+		}
 	}
 
-	// .about__item
+	.decor__bottom {
+		top: auto;
+		bottom: 0;
+		left: 16px;
+		border-color: $color-d38;
 
-	&__item {
+		&::before,
+		&::after {
+			border-color: $color-d38;
+		}
+
+		&::before {
+			top: -41px;
+			left: 25px;
+		}
+
+		&::after {
+			top: -88px;
+			right: 74px;
+		}
 	}
 }
 
 .cart {
-	// .cart__picture
+	position: relative;
+	max-width: 380px;
+	min-height: 525px;
+	border-radius: 10px;
+	margin: 0 auto 40px;
+	padding: 40px 25px 45px;
+	box-shadow: 5px 5px 50px 0 $color-bc20;
 
+	@include sm-min {
+		margin-bottom: 50px;
+		padding: 50px 50px 55px;
+	}
+
+	@include lg-min {
+		position: absolute;
+		margin: 0;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// .cart__picture
 	&__picture {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 60px;
 	}
 
 	// .cart__img
-
 	&__img {
+		min-height: 132px;
 	}
 
 	// .cart__title
-
 	&__title {
+		font-weight: 500;
+		font-size: 20px;
+		margin: 0 0 25px 0;
+		text-align: center;
+
+		@include sm-min {
+			text-align: left;
+		}
 	}
 
 	// .cart__description
-
 	&__description {
+		color: $color-bg25;
+		line-height: 25px;
+		margin: 0 0 65px 0;
+		text-align: center;
+
+		@include sm-min {
+			text-align: left;
+		}
 	}
 
 	// .cart__link
-
 	&__link {
+		position: relative;
+		top: 0;
+		padding: 0 36px 0 0;
+		font-weight: 500;
+		font-size: 14px;
+		color: $color-4a9;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 16px;
+			height: 16px;
+			transform: translateY(-50%);
+			background-image: url("../img/svg-icons/arrow-link.svg");
+			@include bg-cover;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $color-fff;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 154px;
+		height: 154px;
+		background-image: url("../img/decor/points.png");
+		@include bg-cover;
+	}
+
+	&--send {
+		.cart__picture {
+			position: relative;
+			top: -75px;
+			margin-bottom: -15px;
+		}
+
+		@include lg-min {
+			top: 0;
+			right: 0;
+		}
+
+		&::after {
+			right: 0;
+			top: 0;
+			transform: translate(50%, -50%);
+		}
+	}
+
+	&--receive {
+		@include lg-min {
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		&::after {
+			top: 50%;
+			left: 0;
+			transform: translate(-70%, -50%);
+		}
+	}
+
+	&--buy {
+		@include lg-min {
+			bottom: 0;
+			right: 0;
+		}
+
+		&::after {
+			right: 0;
+			bottom: 0;
+			transform: translate(50%, 50%);
+		}
 	}
 }

@@ -61,8 +61,7 @@
 	}
 
 	@include xl-min {
-		display: flex;
-		justify-content: space-between;
+		grid-template-areas: "logo quicklinks others products form";
 	}
 
 	&__item {

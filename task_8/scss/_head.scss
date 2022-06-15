@@ -45,6 +45,7 @@
 	// .head__body
 	&__body {
 		margin: 0 0 30px 0;
+		color: $color-260;
 		@include md-min {
 			max-width: 650px;
 			min-width: 395px;
@@ -59,7 +60,6 @@
 		margin: 0 auto 20px;
 		text-align: center;
 		font-weight: 500;
-		color: $color-260;
 		font-size: calc(24px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
 		line-height: 30px;
 
