@@ -37,28 +37,18 @@ function burger_close() {
 }
 
 // Swiper
-const carousel = new Swiper('.carousel',{
+const slider = new Swiper('.slider-reviews',{
 
-	wrapperClass: 'carousel__wrapper',
-	slideClass: 'carousel__slide',
+	wrapperClass: 'slider-reviews__wrapper',
+	slideClass: 'slider-reviews__slide',
 	
 	navigation: {
-		nextEl: '.carousel__arrow--next',
-		prevEl: '.carousel__arrow--prev',
-	},
-	
-	pagination: {
-		el: '.carousel__pagination',
-		clickable: true,
-		type: 'bullets',
+		nextEl: '.slider-reviews__button--next',
+		prevEl: '.slider-reviews__button--prev',
 	},
 
+	spaceBetween: 20,
 	speed: 1600,
-
-	effect: "fade",
-	fadeEffect: {
-		crossFade: true
-	}
 	});
 
 

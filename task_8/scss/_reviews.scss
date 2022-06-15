@@ -1,0 +1,189 @@
+.reviews {
+	padding: 150px 0 100px;
+
+	&__container {
+		position: relative;
+		padding: 0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 677px;
+			height: 400px;
+			background-color: $color-bc10;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 154px;
+			height: 154px;
+			background-image: url("../img/decor/points.png");
+			@include bg-cover;
+		}
+	}
+
+	// .reviews__title
+	&__title {
+		margin: 0 0 15px 0;
+	}
+}
+
+.slider-reviews {
+	position: relative;
+	max-width: 1195px;
+	padding: 0 10px 10px 0;
+	overflow: hidden;
+
+	// .slider-reviews__wrapper
+	&__wrapper {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 0 40px 0;
+	}
+
+	// .slider-reviews__button-box
+	&__button-box {
+		position: absolute;
+		z-index: 4;
+		right: 10px;
+		bottom: 10px;
+		max-width: 160px;
+		width: 100%;
+		min-height: 80px;
+		border-radius: 4px;
+		background-color: $color-fff;
+		box-shadow: 0 4px 10px 0 $color-bg25;
+	}
+
+	// .slider-reviews__button
+	&__button {
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		width: 80px;
+		height: 80px;
+		background-color: $color-4a9;
+		border: 1px solid transparent;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		cursor: pointer;
+		outline: none;
+		transition: border-color $hoverTime linear;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 4;
+			width: 6px;
+			height: 28px;
+			background-color: $color-fff;
+			transition: background-color $hoverTime linear;
+		}
+
+		&::before {
+			top: 17px;
+			transform: rotate(45deg);
+		}
+		&::after {
+			bottom: 17px;
+			transform: rotate(-45deg);
+		}
+
+		&--prev {
+			left: 0;
+		}
+
+		&--next {
+			right: 0;
+			transform: rotate(180deg);
+		}
+
+		@include md-min {
+			&:focus {
+				border-color: $color-0f0;
+			}
+
+			&:hover {
+				&::before,
+				&::after {
+					background-color: $color-0f0;
+				}
+			}
+		}
+
+		&:active {
+			top: 1px;
+		}
+	}
+
+	.swiper-button-disabled {
+		background-color: $color-fff;
+		&::before,
+		&::after {
+			background-color: $color-4a9;
+		}
+	}
+}
+
+.slide {
+	position: relative;
+	z-index: 0;
+	flex: 0 0 950px;
+	margin: 0 0 0 200px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	// .slide-review__picture
+	&__picture {
+		flex: 0 0 400px;
+		max-width: 400px;
+		min-height: 520px;
+	}
+
+	// .slide-review__description
+	&__description {
+		position: relative;
+		max-width: 418px;
+		padding: 90px 6px 117px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			background-image: url("../img/decor/quotes.png");
+			@include bg-cover;
+		}
+	}
+
+	// .slide-review__text
+	&__text {
+		line-height: 25px;
+		color: $color-878;
+		margin: 0 0 40px 0;
+	}
+
+	// .slide-review__signature
+	&__signature {
+		font-weight: 500;
+		font-size: 18px;
+		color: $color-0f0;
+	}
+}

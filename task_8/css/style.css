@@ -318,6 +318,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   text-align: center;
+  color: #0f001a;
 }
 
 .header {
@@ -1009,6 +1010,210 @@ body {
 
 .stage__text {
   line-height: 26px;
+}
+
+.reviews {
+  padding: 150px 0 100px;
+}
+
+.reviews__container {
+  position: relative;
+  padding: 0;
+}
+
+.reviews__container::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 677px;
+  height: 400px;
+  background-color: rgba(74, 153, 211, 0.2);
+}
+
+.reviews__container::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 154px;
+  height: 154px;
+  background-image: url("../img/decor/points.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.reviews__title {
+  margin: 0 0 15px 0;
+}
+
+.slider-reviews {
+  position: relative;
+  max-width: 1195px;
+  padding: 0 10px 10px 0;
+  overflow: hidden;
+}
+
+.slider-reviews__wrapper {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 40px 0;
+}
+
+.slider-reviews__button-box {
+  position: absolute;
+  z-index: 4;
+  right: 10px;
+  bottom: 10px;
+  max-width: 160px;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.slider-reviews__button {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #4a99d3;
+  border: 1px solid transparent;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
+}
+
+.slider-reviews__button::before, .slider-reviews__button::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  width: 6px;
+  height: 28px;
+  background-color: #fff;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
+.slider-reviews__button::before {
+  top: 17px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.slider-reviews__button::after {
+  bottom: 17px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.slider-reviews__button--prev {
+  left: 0;
+}
+
+.slider-reviews__button--next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 767.98px) {
+  .slider-reviews__button:focus {
+    border-color: #0f001a;
+  }
+  .slider-reviews__button:hover::before, .slider-reviews__button:hover::after {
+    background-color: #0f001a;
+  }
+}
+
+.slider-reviews__button:active {
+  top: 1px;
+}
+
+.slider-reviews .swiper-button-disabled {
+  background-color: #fff;
+}
+
+.slider-reviews .swiper-button-disabled::before, .slider-reviews .swiper-button-disabled::after {
+  background-color: #4a99d3;
+}
+
+.slide {
+  position: relative;
+  z-index: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 950px;
+          flex: 0 0 950px;
+  margin: 0 0 0 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.slide__picture {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 400px;
+          flex: 0 0 400px;
+  max-width: 400px;
+  min-height: 520px;
+}
+
+.slide__description {
+  position: relative;
+  max-width: 418px;
+  padding: 90px 6px 117px;
+}
+
+.slide__description::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/decor/quotes.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide__text {
+  line-height: 25px;
+  color: #878787;
+  margin: 0 0 40px 0;
+}
+
+.slide__signature {
+  font-weight: 500;
+  font-size: 18px;
+  color: #0f001a;
 }
 
 .footer {
