@@ -948,9 +948,21 @@ body {
   background-color: rgba(74, 153, 211, 0.2);
 }
 
+@media only screen and (max-width: 767.98px) {
+  .description {
+    padding: 70px 0;
+  }
+}
+
 .description__title {
   color: #4a99d3;
   margin: 0 0 100px 0;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .description__title {
+    margin-bottom: 70px;
+  }
 }
 
 .description__list {
@@ -962,9 +974,24 @@ body {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .description__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .stage {
   text-align: center;
   padding: 0 10px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .stage:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
 }
 
 .stage__icon {

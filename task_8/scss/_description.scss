@@ -2,22 +2,40 @@
 	padding: 95px 0 100px;
 	background-color: $color-bc10;
 
+	@include md {
+		padding: 70px 0;
+	}
+
 	// .description__title
 	&__title {
 		color: $color-4a9;
 		margin: 0 0 100px 0;
+
+		@include md {
+			margin-bottom: 70px;
+		}
 	}
 
 	// .description__list
 	&__list {
 		display: flex;
 		justify-content: space-between;
+
+		@include md {
+			flex-direction: column;
+		}
 	}
 }
 
 .stage {
 	text-align: center;
 	padding: 0 10px;
+
+	@include md {
+		&:not(:last-child) {
+			margin: 0 0 40px 0;
+		}
+	}
 
 	// .stage__icon
 	&__icon {
