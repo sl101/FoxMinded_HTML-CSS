@@ -28,6 +28,7 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
 .maxcontainer {
 	max-width: $maxcontainer;
 	padding: 0 15px;
@@ -134,4 +135,120 @@ body {
 	font-size: 26px;
 	text-align: center;
 	color: $color-0f0;
+}
+
+.app {
+	text-align: center;
+
+	// .app__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+
+		@include sm-min {
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 380px;
+			margin: 0 auto;
+		}
+
+		@include md-min {
+			margin: 0;
+		}
+	}
+
+	// .app__item
+	&__item {
+		border-radius: 5px;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		@include sm-min {
+			&:not(:last-child) {
+				margin: 0;
+			}
+		}
+	}
+
+	// .app__link
+	&__link {
+		position: relative;
+		top: 0;
+		display: block;
+		max-width: 180px;
+		min-height: 60px;
+		border: 1px solid transparent;
+		border-radius: 5px;
+		outline: none;
+		transition: box-shadow $hoverTime linear, top $hoverTime linear, border-color $hoverTime linear;
+
+		@include md-min {
+			&:focus {
+				border-color: $color-4a9;
+				box-shadow: 2px 2px 20px 5px $color-4a9;
+			}
+
+			&:hover {
+				top: -3px;
+			}
+		}
+
+		&:active {
+			top: 0px;
+		}
+	}
+}
+
+.decor__bottom,
+.decor {
+	position: absolute;
+	width: 141px;
+	height: 119px;
+	border: 8px solid transparent;
+	border-radius: 4px;
+	background-color: transparent;
+	opacity: 0.7;
+	box-shadow: 0 0 4px 0 $color-bg25;
+
+	@include sm {
+		display: none;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 141px;
+		height: 119px;
+		border: 6px solid transparent;
+		border-radius: 4px;
+		background-color: transparent;
+		opacity: 0.9;
+		box-shadow: 0 0 4px 0 $color-bg25;
+	}
+}
+
+.decor {
+	&::before {
+		top: 24px;
+		left: -40px;
+	}
+
+	&::after {
+		top: 72px;
+		right: -74px;
+	}
+}
+
+.decor__bottom {
+	&::before {
+		top: -41px;
+		left: 25px;
+	}
+
+	&::after {
+		top: -88px;
+		right: 74px;
+	}
 }

@@ -49,51 +49,15 @@
 		}
 	}
 
-	.decor__bottom,
 	.decor {
-		position: absolute;
+		border-color: $color-4a9;
 		top: 0;
 		right: 16px;
-		width: 141px;
-		height: 119px;
-		border: 8px solid $color-4a9;
-		border-radius: 4px;
-		background-color: transparent;
-		opacity: 0.7;
-		box-shadow: 0 0 4px 0 $color-bg25;
+		left: auto;
 
-		@include sm {
-			display: none;
-		}
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			width: 141px;
-			height: 119px;
-			border: 6px solid transparent;
-			border-radius: 4px;
-			background-color: transparent;
-			opacity: 0.9;
-			box-shadow: 0 0 4px 0 $color-bg25;
-		}
-	}
-
-	.decor {
 		&::before,
 		&::after {
 			border-color: $color-4a9;
-		}
-
-		&::before {
-			top: 24px;
-			left: -40px;
-		}
-
-		&::after {
-			top: 72px;
-			right: -74px;
 		}
 	}
 
@@ -102,20 +66,9 @@
 		bottom: 0;
 		left: 16px;
 		border-color: $color-d38;
-
 		&::before,
 		&::after {
 			border-color: $color-d38;
-		}
-
-		&::before {
-			top: -41px;
-			left: 25px;
-		}
-
-		&::after {
-			top: -88px;
-			right: 74px;
 		}
 	}
 }

@@ -1,12 +1,12 @@
 .reviews {
-	padding: 150px 0 100px;
+	padding: 150px 0 70px;
 
 	@include lg {
-		padding: 100px 0 50px;
+		padding: 100px 0 20px;
 	}
 
 	@include sm {
-		padding: 50px 0 50px;
+		padding: 50px 0 20px;
 	}
 
 	&__container {
