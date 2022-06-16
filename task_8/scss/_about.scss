@@ -139,74 +139,6 @@
 		margin: 0;
 	}
 
-	&__content {
-		position: relative;
-		z-index: 3;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	// .cart__picture
-	&__picture {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		margin: 0 auto;
-		margin-bottom: 60px;
-	}
-
-	// .cart__img
-	&__img {
-		min-height: 132px;
-	}
-
-	// .cart__title
-	&__title {
-		font-weight: 500;
-		font-size: 20px;
-		margin: 0 0 25px 0;
-		text-align: center;
-
-		@include sm-min {
-			text-align: left;
-		}
-	}
-
-	// .cart__description
-	&__description {
-		color: $color-bg25;
-		line-height: 25px;
-		margin: 0 0 65px 0;
-		text-align: center;
-
-		@include sm-min {
-			text-align: left;
-		}
-	}
-
-	// .cart__link
-	&__link {
-		position: relative;
-		top: 0;
-		padding: 0 36px 0 0;
-		font-weight: 500;
-		font-size: 14px;
-		color: $color-4a9;
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			right: 0;
-			width: 16px;
-			height: 16px;
-			transform: translateY(-50%);
-			background-image: url("../img/svg-icons/arrow-link.svg");
-			@include bg-cover;
-		}
-	}
 	&::before {
 		content: "";
 		position: absolute;
@@ -272,6 +204,94 @@
 			right: 0;
 			bottom: 0;
 			transform: translate(50%, 50%);
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// .cart__picture
+	&__picture {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+
+	// .cart__img
+	&__img {
+		min-height: 132px;
+	}
+
+	// .cart__title
+	&__title {
+		font-weight: 500;
+		font-size: 20px;
+		margin: 0 0 25px 0;
+		text-align: center;
+
+		@include sm-min {
+			text-align: left;
+		}
+	}
+
+	// .cart__description
+	&__description {
+		color: $color-bg25;
+		line-height: 25px;
+		margin: 0 0 65px 0;
+		text-align: center;
+
+		@include sm-min {
+			text-align: left;
+		}
+	}
+
+	// .cart__link
+	&__link {
+		position: relative;
+		top: 0;
+		display: inline-block;
+		padding: 0 36px 4px 0;
+		font-weight: 500;
+		font-size: 14px;
+		color: $color-4a9;
+		border: 1px solid transparent;
+		outline: none;
+		transition: color $hoverTime linear, border-color $hoverTime linear;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 4px);
+			right: 0;
+			width: 16px;
+			height: 16px;
+			transform: translateY(-50%);
+			background-image: url("../img/svg-icons/arrow-link.svg");
+			@include bg-cover;
+		}
+
+		@include md-min {
+			&:focus {
+				border-bottom-color: $color-4a9;
+			}
+
+			&:hover {
+				color: $color-0f0;
+			}
+		}
+
+		&:active {
+			top: calc(50% + 1px);
 		}
 	}
 }

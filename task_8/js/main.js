@@ -47,7 +47,7 @@ const slider = new Swiper('.slider-reviews',{
 		prevEl: '.slider-reviews__button--prev',
 	},
 
-	spaceBetween: 20,
+	spaceBetween: 50,
 	speed: 1600,
 	});
 
