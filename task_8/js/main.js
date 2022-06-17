@@ -51,6 +51,50 @@ const slider = new Swiper('.slider-reviews',{
 	speed: 1600,
 	});
 
+// Animation ====================================
 
+	let blockAnimate = true;
+	const window_height = window.innerHeight;  // высота окна браузера
+	const animElements = document.querySelectorAll('.anim-item');
+	
+	if(animElements.length > 0){
+		
+		window.addEventListener('scroll', animOnScroll); // ставим слушатель на окно
+	
+		function animOnScroll (param){ 
+			for(let i = 0; i < animElements.length; i++) {
+				
+				let animItem = animElements[i];
+				let animItemHeight = animItem.offsetHeight; // высота елемента
+				let animItemOffset = offset(animItem).top; // расстояние от верха элемента до начала страницы
+				let animStart = 1; // коэфициент 
+				
+				let animItemPoint = (window_height - animItemHeight / animStart); // часть элемета при появлениии которой запускается анимация
+				
+				if(animItemHeight > window_height){
+					animItemPoint = window_height - window_height / animStart; // часть элемета при появлениии которой запускается анимация, если элемент больше окна
+				}
+				if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
+						animItem.classList.add('_animate');
+				} else {
+					if(!animItem.classList.contains('_anim-no-hide')){ 
+						animItem.classList.remove('_animate');
+					}
+				}
+			}
+		}
+	
+		function offset(el) {
+			const rect = el.getBoundingClientRect(),
+			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			return {top: rect.top + scrollTop, left: rect.left + scrollLeft};
+		}
+	
+		setTimeout(() => {
+			animOnScroll();
+		},300);
+	};
+	
 
 

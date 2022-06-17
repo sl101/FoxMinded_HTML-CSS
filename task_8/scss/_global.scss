@@ -135,15 +135,33 @@ body {
 	font-size: 26px;
 	text-align: center;
 	color: $color-0f0;
+
+	@include md-min {
+		transform: translate(0, -100px);
+
+		&._animate {
+			transform: translate(0, 0);
+		}
+	}
 }
 
 .app {
 	text-align: center;
+	transition: transform $doubleHoverTime linear, opacity $doubleHoverTime linear, visibility $doubleHoverTime linear;
+
+	@include md-min {
+		transform: translate(0, 100%);
+
+		&._animate {
+			transform: translate(0, 0);
+		}
+	}
 
 	// .app__list
 	&__list {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 
 		@include sm-min {
 			flex-direction: row;
@@ -211,6 +229,12 @@ body {
 	opacity: 0.7;
 	box-shadow: 0 0 4px 0 $color-bg25;
 
+	@include md-min {
+		&._animate {
+			opacity: 0.7;
+		}
+	}
+
 	@include sm {
 		display: none;
 	}
@@ -250,5 +274,21 @@ body {
 	&::after {
 		top: -88px;
 		right: 74px;
+	}
+}
+
+.anim-item {
+	transition: transform $doubleHoverTime linear, opacity $doubleHoverTime linear, visibility $doubleHoverTime linear;
+
+	@include md-min {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+._animate {
+	@include md-min {
+		opacity: 1;
+		visibility: visible;
 	}
 }

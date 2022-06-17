@@ -81,10 +81,16 @@
 	margin: 0 auto 40px;
 	padding: 40px 25px 45px;
 	box-shadow: 5px 5px 50px 0 $color-bc20;
+	transition: transform $doubleHoverTime linear, opacity $doubleHoverTime linear, visibility $doubleHoverTime linear;
 
 	@include sm-min {
 		margin-bottom: 50px;
 		padding: 50px 50px 55px;
+	}
+
+	@include md-min {
+		opacity: 0;
+		visibility: hidden;
 	}
 
 	@include lg-min {
@@ -114,7 +120,19 @@
 		@include bg-cover;
 	}
 
+	@include md-min {
+		&._animate {
+			transform: translate(0, 0);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
 	&--send {
+		@include md-min {
+			transform: translateX(100%);
+		}
+
 		.cart__picture {
 			position: relative;
 			top: -75px;
@@ -134,10 +152,16 @@
 	}
 
 	&--receive {
+		@include md-min {
+			transform: translate(-100%, -50%);
+			&._animate {
+				transform: translate(0, -50%);
+			}
+		}
+
 		@include lg-min {
 			top: 50%;
 			left: 0;
-			transform: translateY(-50%);
 		}
 
 		&::after {
@@ -148,6 +172,10 @@
 	}
 
 	&--buy {
+		@include md-min {
+			transform: translateX(100%);
+		}
+
 		@include lg-min {
 			bottom: 0;
 			right: 0;

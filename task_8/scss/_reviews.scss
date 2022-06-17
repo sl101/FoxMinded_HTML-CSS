@@ -1,5 +1,5 @@
 .reviews {
-	padding: 150px 0 70px;
+	padding: 150px 0 55px;
 
 	@include lg {
 		padding: 100px 0 20px;
@@ -17,7 +17,7 @@
 			content: "";
 			position: absolute;
 			z-index: 0;
-			top: 50%;
+			top: 59%;
 			left: 0;
 			transform: translateY(-50%);
 			width: 677px;
@@ -45,10 +45,10 @@
 
 	// .reviews__title
 	&__title {
-		margin: 0 0 15px 0;
+		margin: 0 0 50px 0;
 
-		@include lg {
-			margin: 0 0 50px 0;
+		@include lg_min {
+			margin: 0 0 15px 0;
 		}
 	}
 }
@@ -244,7 +244,7 @@
 	&__description {
 		position: relative;
 		max-width: 418px;
-		padding: 90px 6px 117px;
+		padding: 90px 6px 80px;
 
 		@include md {
 			padding: 90px 6px 80px;
