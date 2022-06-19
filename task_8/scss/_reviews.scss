@@ -11,7 +11,7 @@
 
 	&__container {
 		position: relative;
-		padding: 0;
+		padding: 0 15px;
 
 		&::before {
 			content: "";
@@ -40,6 +40,10 @@
 			height: 154px;
 			background-image: url("../img/decor/points.png");
 			@include bg-cover;
+		}
+
+		@include md-min {
+			padding: 0;
 		}
 	}
 

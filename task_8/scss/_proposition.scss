@@ -1,10 +1,9 @@
 .proposition {
-	// position: relative;
 	padding: 48px 0 125px;
 	overflow: hidden;
 
 	@include md {
-		padding: 48px 0 180px;
+		padding: 48px 0 80px;
 	}
 
 	@include sm {
@@ -38,12 +37,17 @@
 			transform: translate(-100%, 0);
 
 			&._animate {
-				transform: translate(-70px, 0);
+				transform: translate(0, 0);
+				// transform: translate(-70px, 0);
 			}
 		}
 
 		@include lg-min {
 			margin: 0;
+
+			&._animate {
+				transform: translate(-70px, 0);
+			}
 		}
 
 		@include xl-min {

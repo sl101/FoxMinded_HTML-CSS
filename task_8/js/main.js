@@ -58,23 +58,23 @@ const slider = new Swiper('.slider-reviews',{
 	const animElements = document.querySelectorAll('.anim-item');
 	
 	if(animElements.length > 0){
-		
+
 		window.addEventListener('scroll', animOnScroll); // ставим слушатель на окно
 	
 		function animOnScroll (param){ 
 			for(let i = 0; i < animElements.length; i++) {
-				
 				let animItem = animElements[i];
 				let animItemHeight = animItem.offsetHeight; // высота елемента
 				let animItemOffset = offset(animItem).top; // расстояние от верха элемента до начала страницы
 				let animStart = 1; // коэфициент 
-				
 				let animItemPoint = (window_height - animItemHeight / animStart); // часть элемета при появлениии которой запускается анимация
-				
+				let showPoint = (pageYOffset + (window_height - window_height / 5)) + 110; // точка показа анимации
+
 				if(animItemHeight > window_height){
 					animItemPoint = window_height - window_height / animStart; // часть элемета при появлениии которой запускается анимация, если элемент больше окна
 				}
-				if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
+
+				if(showPoint > animItemOffset){
 						animItem.classList.add('_animate');
 				} else {
 					if(!animItem.classList.contains('_anim-no-hide')){ 

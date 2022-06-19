@@ -32,6 +32,7 @@
 		@content;
 	}
 }
+
 @mixin sm-min {
 	@media only screen and (min-width: #{$screen-sm + px}) {
 		@content;

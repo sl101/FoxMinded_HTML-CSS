@@ -88,11 +88,6 @@
 		padding: 50px 50px 55px;
 	}
 
-	@include md-min {
-		opacity: 0;
-		visibility: hidden;
-	}
-
 	@include lg-min {
 		position: absolute;
 		margin: 0;
@@ -123,8 +118,6 @@
 	@include md-min {
 		&._animate {
 			transform: translate(0, 0);
-			opacity: 1;
-			visibility: visible;
 		}
 	}
 
@@ -153,15 +146,19 @@
 
 	&--receive {
 		@include md-min {
-			transform: translate(-100%, -50%);
+			transform: translate(-100%, 0);
 			&._animate {
-				transform: translate(0, -50%);
+				transform: translate(0, 0);
 			}
 		}
 
 		@include lg-min {
 			top: 50%;
-			left: 0;
+			left: 85px;
+			transform: translate(-100%, -50%);
+			&._animate {
+				transform: translate(0, -50%);
+			}
 		}
 
 		&::after {
