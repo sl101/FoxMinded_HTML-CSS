@@ -784,13 +784,7 @@ body {
 
 .about__container {
   position: relative;
-  padding: 50px 0;
-}
-
-@media only screen and (min-width: 479.98px) {
-  .about__container {
-    padding: 80px 0;
-  }
+  padding: 50px 0 30px;
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -865,10 +859,10 @@ body {
 .cart {
   position: relative;
   max-width: 380px;
-  min-height: 525px;
   border-radius: 10px;
   margin: 0 auto 40px;
   padding: 40px 25px 45px;
+  text-align: center;
   -webkit-box-shadow: 5px 5px 50px 0 rgba(74, 153, 211, 0.2);
           box-shadow: 5px 5px 50px 0 rgba(74, 153, 211, 0.2);
   -webkit-transition: opacity 0.6s linear, visibility 0.6s linear, -webkit-transform 0.6s linear;
@@ -879,8 +873,15 @@ body {
 
 @media only screen and (min-width: 479.98px) {
   .cart {
+    min-height: 525px;
     margin-bottom: 50px;
     padding: 50px 50px 55px;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  .cart {
+    text-align: left;
   }
 }
 
@@ -922,23 +923,29 @@ body {
   }
 }
 
-@media only screen and (min-width: 767.98px) {
-  .cart--send {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
 .cart--send .cart__picture {
   position: relative;
   top: -75px;
   margin-bottom: -15px;
 }
 
+@media only screen and (max-width: 479.98px) {
+  .cart--send .cart__picture {
+    margin-bottom: -35px;
+  }
+}
+
 @media only screen and (min-width: 991.98px) {
   .cart--send {
     top: 0;
     right: 0;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  .cart--send {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 
@@ -1025,6 +1032,12 @@ body {
   margin-bottom: 60px;
 }
 
+@media only screen and (max-width: 479.98px) {
+  .cart__picture {
+    margin-bottom: 40px;
+  }
+}
+
 .cart__img {
   min-height: 132px;
 }
@@ -1033,25 +1046,17 @@ body {
   font-weight: 500;
   font-size: 20px;
   margin: 0 0 25px 0;
-  text-align: center;
-}
-
-@media only screen and (min-width: 479.98px) {
-  .cart__title {
-    text-align: left;
-  }
 }
 
 .cart__description {
   color: rgba(0, 0, 0, 0.25);
   line-height: 25px;
-  margin: 0 0 65px 0;
-  text-align: center;
+  margin: 0 0 35px 0;
 }
 
 @media only screen and (min-width: 479.98px) {
   .cart__description {
-    text-align: left;
+    margin: 0 0 65px 0;
   }
 }
 
@@ -1109,6 +1114,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 479.98px) {
+  .description {
+    padding: 50px 0;
+  }
+}
+
 .description__title {
   color: #4a99d3;
   margin: 0 0 86px 0;
@@ -1117,6 +1128,12 @@ body {
 @media only screen and (max-width: 767.98px) {
   .description__title {
     margin-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 479.98px) {
+  .description__title {
+    margin-bottom: 50px;
   }
 }
 
@@ -1236,7 +1253,6 @@ body {
 .reviews__container::after {
   content: "";
   position: absolute;
-  z-index: 1;
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
@@ -1451,6 +1467,8 @@ body {
 }
 
 .slide__picture {
+  position: relative;
+  z-index: 3;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 400px;
           flex: 0 0 400px;
@@ -1472,6 +1490,17 @@ body {
     margin: 0 0 50px 0;
     text-align: center;
     border-radius: 50%;
+    background-color: #fff;
+  }
+  .slide__picture::before {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     background-color: rgba(74, 153, 211, 0.1);
   }
 }
@@ -1480,6 +1509,7 @@ body {
   .slide__picture {
     max-width: 280px;
     max-height: 280px;
+    margin: 0 0 30px 0;
   }
 }
 
@@ -1508,13 +1538,14 @@ body {
 
 @media only screen and (max-width: 767.98px) {
   .slide__description {
-    padding: 90px 6px 80px;
+    padding: 60px 6px 80px;
   }
 }
 
 @media only screen and (max-width: 479.98px) {
   .slide__description {
-    padding: 90px 6px 0;
+    text-align: center;
+    padding: 40px 6px 0;
   }
 }
 
@@ -1530,6 +1561,21 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .slide__description::before {
+    left: 10%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 479.98px) {
+  .slide__description::before {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .slide__text {
@@ -1784,6 +1830,10 @@ body {
   }
 }
 
+.footer-nav__item {
+  text-align: center;
+}
+
 @media only screen and (min-width: 479.98px) {
   .footer-nav__item {
     min-width: 150px;
@@ -1796,26 +1846,16 @@ body {
   }
 }
 
+@media only screen and (min-width: 991.98px) {
+  .footer-nav__item {
+    text-align: left;
+  }
+}
+
 .footer-nav__item--logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
-  -ms-grid-column-align: start;
-      justify-self: start;
-}
-
-.footer-nav__item--quicklinks, .footer-nav__item--others, .footer-nav__item--products {
-  text-align: center;
-}
-
-.footer-nav__item--quicklinks:not(:last-child), .footer-nav__item--others:not(:last-child), .footer-nav__item--products:not(:last-child) {
-  padding: 0 10px 0 0;
-}
-
-@media only screen and (min-width: 991.98px) {
-  .footer-nav__item--quicklinks, .footer-nav__item--others, .footer-nav__item--products {
-    text-align: left;
-  }
 }
 
 .footer-nav__item--quicklinks {
@@ -1834,7 +1874,6 @@ body {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: products;
-  padding: 0;
 }
 
 .footer-nav__item--form {
@@ -1844,7 +1883,6 @@ body {
 }
 
 .footer-nav__logo {
-  display: block;
   max-width: 110px;
   font-weight: 700;
   font-size: 28px;
@@ -1854,6 +1892,12 @@ body {
 @media only screen and (min-width: 479.98px) {
   .footer-nav__logo {
     font-size: 34px;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  .footer-nav__logo {
+    display: block;
   }
 }
 
@@ -1889,7 +1933,7 @@ body {
 }
 
 .footer-nav__link {
-  font-size: 10px;
+  font-size: 12px;
   padding-bottom: 2px;
 }
 
@@ -1948,16 +1992,15 @@ body {
 
 .footer-form__input, .footer-form__button {
   display: block;
+  padding: 16px 7px 15px;
   background-color: #fff;
   border-radius: 3px;
   outline: none;
   border: 1px solid transparent;
-  min-height: 50px;
 }
 
 .footer-form__input {
   width: 100%;
-  padding: 0 7px;
   margin: 0 0 10px 0;
   -webkit-transition: border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
   transition: border-color 0.3s linear, -webkit-box-shadow 0.3s linear;
