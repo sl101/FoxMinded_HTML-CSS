@@ -1,0 +1,294 @@
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: "Objective", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	background-color: $color-fff;
+	color: $color-0f0;
+}
+
+.container {
+	max-width: $container;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.maxcontainer {
+	max-width: $maxcontainer;
+	padding: 0 15px;
+	@include xl-min {
+		padding: 0 130px;
+		margin: 0 auto;
+	}
+}
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-page {
+	flex: 1 1 auto;
+}
+
+.lock {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: $color-bg08;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-bg08;
+	}
+}
+
+.hover {
+	position: relative;
+	top: 0;
+	outline: none;
+	border: 1px solid transparent;
+	transition: border-color $hoverTime linear, color $hoverTime linear;
+
+	@include md-min {
+		&:focus {
+			border-bottom-color: $color-4a9;
+		}
+
+		&:hover {
+			color: $color-4a9;
+			border-bottom-color: transparent;
+		}
+	}
+
+	&:active {
+		top: 1px;
+	}
+
+	&--footer {
+		@include md-min {
+			&:focus {
+				border-bottom-color: $color-fff;
+			}
+
+			&:hover {
+				color: $color-0f0;
+				border-bottom-color: transparent;
+			}
+		}
+	}
+}
+
+.menu__body {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.4s ease-out;
+
+	@include md {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transform: translate(-100%, 0);
+	}
+
+	&.active {
+		transform: translate(0, 0);
+	}
+}
+
+.title {
+	font-weight: 700;
+	font-size: 26px;
+	text-align: center;
+	color: $color-0f0;
+
+	@include md-min {
+		transform: translate(0, -100px);
+
+		&._animate {
+			transform: translate(0, 0);
+		}
+	}
+}
+
+.app {
+	text-align: center;
+	transition: transform $doubleHoverTime linear, opacity $doubleHoverTime linear, visibility $doubleHoverTime linear;
+
+	@include md-min {
+		transform: translate(0, 100%);
+
+		&._animate {
+			transform: translate(0, 0);
+		}
+	}
+
+	// .app__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include sm-min {
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 380px;
+			margin: 0 auto;
+		}
+
+		@include md-min {
+			margin: 0;
+		}
+	}
+
+	// .app__item
+	&__item {
+		border-radius: 5px;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		@include sm-min {
+			&:not(:last-child) {
+				margin: 0;
+			}
+		}
+	}
+
+	// .app__link
+	&__link {
+		position: relative;
+		top: 0;
+		display: block;
+		max-width: 180px;
+		min-height: 60px;
+		border: 1px solid transparent;
+		border-radius: 5px;
+		outline: none;
+		transition: box-shadow $hoverTime linear, top $hoverTime linear, border-color $hoverTime linear;
+
+		@include md-min {
+			&:focus {
+				border-color: $color-4a9;
+				box-shadow: 2px 2px 20px 5px $color-4a9;
+			}
+
+			&:hover {
+				top: -3px;
+			}
+		}
+
+		&:active {
+			top: 0px;
+		}
+	}
+}
+
+.decor__bottom,
+.decor {
+	position: absolute;
+	width: 141px;
+	height: 119px;
+	border: 8px solid transparent;
+	border-radius: 4px;
+	background-color: transparent;
+	opacity: 0.2;
+	box-shadow: 0 0 4px 0 $color-bg25;
+
+	@include md-min {
+		&._animate {
+			opacity: 0.7;
+		}
+	}
+
+	@include sm {
+		display: none;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 141px;
+		height: 119px;
+		border: 6px solid transparent;
+		border-radius: 4px;
+		background-color: transparent;
+		opacity: 0.9;
+		box-shadow: 0 0 4px 0 $color-bg25;
+	}
+}
+
+.decor {
+	&::before {
+		top: 24px;
+		left: -40px;
+	}
+
+	&::after {
+		top: 72px;
+		right: -74px;
+	}
+}
+
+.decor__bottom {
+	&::before {
+		top: -41px;
+		left: 25px;
+	}
+
+	&::after {
+		top: -88px;
+		right: 74px;
+	}
+}
+
+.anim-item {
+	transition: transform $doubleHoverTime linear, opacity $doubleHoverTime linear, visibility $doubleHoverTime linear;
+
+	@include md-min {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+._animate {
+	@include md-min {
+		opacity: 1;
+		visibility: visible;
+	}
+}
