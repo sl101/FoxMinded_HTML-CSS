@@ -30,32 +30,32 @@
 					<li class="form__item">
 						<label class="form__label">
 							Last name
-							<input class="form__input input" type="text" name="last-name" value=""
-								placeholder="enter your last name" tabindex="2">
+							<input class="form__input input" type="text" name="last-name" value="" placeholder="enter your last name"
+								tabindex="2">
 						</label>
 					</li>
 
 					<li class="form__item email-item">
 						<label class="form__label">
 							Email*
-							<input class="form__input input" type="email" name="email" placeholder="enter your email"
-								required tabindex="3">
+							<input class="form__input input" type="email" name="email" placeholder="enter your email" required
+								tabindex="3">
 						</label>
 					</li>
 
 					<li class="form__item">
 						<label class="form__label">
 							Password*
-							<input class="form__input input" type="password" name="userpass"
-								placeholder="enter your password" required tabindex="4">
+							<input class="form__input input" type="password" name="userpass" placeholder="enter your password"
+								required tabindex="4">
 						</label>
 					</li>
 
 					<li class="form__item">
 						<label class="form__label">
 							Confirm Password*
-							<input class="form__input input" type="password" name="userpass"
-								placeholder="enter your password again" required tabindex="5">
+							<input class="form__input input" type="password" name="userpass" placeholder="enter your password again"
+								required tabindex="5">
 						</label>
 					</li>
 
@@ -63,16 +63,14 @@
 						Gender:
 						<ul class="radiochek__list radiochek__list--radio">
 							<li class="radiochek__item">
-								<input class="form__input radiochek__input" id="male" type="radio" name="gender"
-									value="male" checked>
+								<input class="form__input radiochek__input" id="male" type="radio" name="gender" value="male" checked>
 								<label class="form__label radiochek__label" for="male" tabindex="6">
 									Male
 								</label>
 							</li>
 
 							<li class="radiochek__item">
-								<input class="form__input radiochek__input" id="female" type="radio" name="gender"
-									value="female">
+								<input class="form__input radiochek__input" id="female" type="radio" name="gender" value="female">
 								<label class="form__label radiochek__label" for="female" tabindex="6">
 									Female
 								</label>
@@ -84,37 +82,33 @@
 						Hobbies
 						<ul class="radiochek__list">
 							<li class="radiochek__item">
-								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
-									id="music" name="music" value="yes" checked>
-								<label class="form__label radiochek__label radiochek__label--box" for="music"
-									tabindex="7">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox" id="music"
+									name="music" value="yes" checked>
+								<label class="form__label radiochek__label radiochek__label--box" for="music" tabindex="7">
 									Music
 								</label>
 							</li>
 
 							<li class="radiochek__item">
-								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
-									id="sports" name="sports" value="yes">
-								<label class="form__label radiochek__label radiochek__label--box" for="sports"
-									tabindex="8">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox" id="sports"
+									name="sports" value="yes">
+								<label class="form__label radiochek__label radiochek__label--box" for="sports" tabindex="8">
 									Sports
 								</label>
 							</li>
 
 							<li class="radiochek__item">
-								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
-									id="travel" name="travel" value="yes">
-								<label class="form__label radiochek__label radiochek__label--box" for="travel"
-									tabindex="9">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox" id="travel"
+									name="travel" value="yes">
+								<label class="form__label radiochek__label radiochek__label--box" for="travel" tabindex="9">
 									Travel
 								</label>
 							</li>
 
 							<li class="radiochek__item">
-								<input class="form__input radiochek__input radiochek__input--box" type="checkbox"
-									id="movies" name="movies" value="yes">
-								<label class="form__label radiochek__label radiochek__label--box" for="movies"
-									tabindex="10">
+								<input class="form__input radiochek__input radiochek__input--box" type="checkbox" id="movies"
+									name="movies" value="yes">
+								<label class="form__label radiochek__label radiochek__label--box" for="movies" tabindex="10">
 									Movies
 								</label>
 							</li>
@@ -124,28 +118,23 @@
 					<li class="form__item income-item">
 						Source of Income
 						<ul class="income-item__wrapper">
-							<input class="income-item__input" id="employed" type="radio" value="employed" name="income"
-								checked>
+							<input class="income-item__input" id="employed" type="radio" value="employed" name="income" checked>
 							<label class="income-item__label" for="employed">Employed</label>
-							<input class="income-item__input" id="freelance" type="radio" value="freelance"
-								name="income">
+							<input class="income-item__input" id="freelance" type="radio" value="freelance" name="income">
 							<label class="income-item__label" for="freelance">Freelance</label>
 							<input class="income-item__input" id="landlord" type="radio" value="landlord" name="income">
 							<label class="income-item__label" for="landlord">Landlord</label>
 
-							<button class="income-item__arrow income-item__arrow--up" type="button"
-								tabindex="11"></button>
-							<button class="income-item__arrow income-item__arrow--down" type="button"
-								tabindex="12"></button>
+							<button class="income-item__arrow income-item__arrow--up" type="button" tabindex="11"></button>
+							<button class="income-item__arrow income-item__arrow--down" type="button" tabindex="12"></button>
 						</ul>
 					</li>
 
 					<li class="form__item range-item">
 						Income
 						<div class="form__output range-item__range">
-							<input class="form__input range-item__slider" type="range" name="income" id="incomeInputId"
-								value="24" min="0" max="100" oninput="incomeOutputId.value = incomeInputId.value"
-								tabindex="13">
+							<input class="form__input range-item__slider" type="range" name="income" id="incomeInputId" value="24"
+								min="0" max="100" oninput="incomeOutputId.value = incomeInputId.value" tabindex="13">
 							<div class="range-item__box">
 								<output class="range-item__amount" name="income" id="incomeOutputId">
 									26
@@ -165,8 +154,7 @@
 					<li class="form__item number-item">
 						<label class="form__label">
 							Age
-							<input class="form__input number-item__input" type="number" name="age" placeholder="18"
-								tabindex="15">
+							<input class="form__input number-item__input" type="number" name="age" placeholder="18" tabindex="15">
 						</label>
 					</li>
 

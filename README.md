@@ -1,3 +1,5 @@
-# Загальний репозіторій для розділу HTML/CSS
+# The shared repository for the partition HTML/CSS
 
-### кожне завдання формується в новій папці під назвою task_n, де n - номер завдання
+### each task is created in a new folder called task_n, where n is the task number
+
+- [task_1]()
