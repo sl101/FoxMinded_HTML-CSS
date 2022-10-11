@@ -6,6 +6,8 @@
 
 - [task_2](https://sl101.github.io/FoxMinded_HTML-CSS/task_2/task_2_2)
 
+- [task_3](https://sl101.github.io/FoxMinded_HTML-CSS/task_3)
+
 - [task_4](https://sl101.github.io/FoxMinded_HTML-CSS/task_4)
 
 - [task_5](https://sl101.github.io/FoxMinded_HTML-CSS/task_5)
